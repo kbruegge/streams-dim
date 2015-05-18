@@ -7,9 +7,9 @@ public class Main {
 
     public static void main(String[] args){
         System.out.println("Hello");
-//        String path = System.getProperty("java.library.path");
-        System.setProperty("java.library.path", "/Users/kai/Development/dimstream/");
         String path = System.getProperty("java.library.path");
+        System.setProperty("java.library.path", path + ":/Users/kai/Development/dimstream/");
+        path = System.getProperty("java.library.path");
         System.out.println("Library path: " + path);
 
         DimInfo pointing = new DimInfo("DRIVE/DRIVE_POINTING_POSITION",5,-1);
